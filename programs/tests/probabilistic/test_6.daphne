@@ -1,0 +1,4 @@
+(defn get-sig [var]
+  (* var var)
+ )
+ (sample (normal 0.0 (get-sig 1.2)))

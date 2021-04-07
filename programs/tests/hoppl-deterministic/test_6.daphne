@@ -1,0 +1,4 @@
+;; ensure immutability of tensor datatypes
+(let [map1 (hash-map "a" 1 "b" 2 "c" 3)
+       map2 (hash-map "a" (+ 1 (get map1 "a")))]
+   (get map1 "a"))

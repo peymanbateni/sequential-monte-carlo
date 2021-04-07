@@ -1,0 +1,6 @@
+;; functions as first class values
+(let [m (fn [x] 
+          (if (> 0 x) 
+            (fn [y] (+ 1 y))
+            (fn [z] (+ 2 z))))]
+  ((m 1) 2))

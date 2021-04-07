@@ -1,0 +1,4 @@
+;; defn + let
+(defn add [a b] (+ a b))
+(let [a (add 2 3)]
+    (- a 1)) 

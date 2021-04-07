@@ -1,0 +1,7 @@
+(defn until-success [p n]
+   (if (sample (flip p))
+     n
+     (until-success p (+ n 1))))
+
+(let [p 0.01]
+  (until-success p 0))

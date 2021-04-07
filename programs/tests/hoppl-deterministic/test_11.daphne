@@ -1,0 +1,6 @@
+;; reduce
+(defn reduce [f x values]
+     (if (empty? values)
+        x
+        (reduce f (f x (first values)) (rest values))))
+(reduce + 0 [1 2 3])

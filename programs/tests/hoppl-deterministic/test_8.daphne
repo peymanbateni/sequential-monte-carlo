@@ -1,0 +1,7 @@
+;; ensure immutability after function application
+(let [m  (hash-map "a" 1 "b" 2 "c" 3)
+       v [7 8 9]
+       f (fn [x] (+ (+ x (get m "b")) (get v 1)))
+      n m
+      w v]
+  [(f 1) (get m "b") (get w 1)])

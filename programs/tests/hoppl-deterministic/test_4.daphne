@@ -1,0 +1,5 @@
+;; ensure immutability of datastructure
+(let [col (hash-map "a" 1 "b" 2)
+       f (fn [x] (get col x))
+      _ (put col "a" 7)]
+   (f "a"))
